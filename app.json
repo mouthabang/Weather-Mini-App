@@ -1,0 +1,11 @@
+{
+  "subPackageBuildType": "shared",
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "defaultTitle": "LS weather",
+    "backgroundColor": "#ebebeb"
+
+   }
+}

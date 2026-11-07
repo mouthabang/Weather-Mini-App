@@ -1,0 +1,19 @@
+<view class=" px-2">
+  <view class="h-vh-5">
+  </view>
+  <view class="p-2 h-vh-80 bg-white shadow-lg border border-gray-200">
+    <view class="text-center ">
+      <text class="text-lg font-bold">
+        Welcome to LS Weather APP
+      </text>
+    </view>
+    <view class="fixed bottom-6 left-0 right-0 mt-2 px-4">
+
+      <button class="bg-red-600 rounded-sm" hover-class="none" onTap="onClickMe">
+        <text class="text-white text-base">Continue</text>
+      </button>
+
+
+    </view>
+  </view>
+</view>
