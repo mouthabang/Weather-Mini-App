@@ -1,12 +1,22 @@
+import {
+  loadLanguage
+} from '../../i18n/i18n';
+
+const app = getApp();
+
 Page({
   onLoad(query) {
-    console.log("onLoad");
+    
+    loadLanguage(app.languageCode);
+    this.setData({
+      i18n: app.i18n
+    });
+
+    console.log(this.data);
   },
   onReady() {
-    console.log("onReady");
   },
   onShow() {
-    console.log("onShow");
   },
   onHide() { 
   },
