@@ -5,5 +5,11 @@
     "title": "Welcome to LS Weather APP",
     "continue":"Continue"
   }
+,
 
+  "general": {
+    "api_error_heading": "Something went wrong",
+    "api_error_sub_heading": "Apologies, we appear to be having trouble completing this request right now. Please try again later.",
+    "api_error_button": "Try again"
+  }
 }

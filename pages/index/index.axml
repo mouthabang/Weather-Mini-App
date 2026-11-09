@@ -1,19 +1,53 @@
-<view class=" px-2">
-  <view class="h-vh-5">
-  </view>
-  <view class="p-2 h-vh-80 bg-white shadow-lg border border-gray-200">
-    <view class="text-center ">
-      <text class="text-lg font-bold">
-        {{i18n.index.title}}
-      </text>
+
+  <loading-spinner isLoading="{{isLoading}}"></loading-spinner>
+
+<block a:if="{{ !apiError }}">
+
+  <view class="px-2">
+    <view class="h-vh-5">
     </view>
-    <view class="fixed bottom-6 left-0 right-0 mt-2 px-4">
+    <view class="p-2 h-vh-80 bg-white shadow-lg border border-gray-200">
+      <view class="text-center ">
+        <text class="text-lg font-bold">
+          {{i18n.index.title}}
+        </text>
+        <view>
+          <text>{{firstname}}</text>
 
-      <button class="bg-red-600 rounded-sm" hover-class="none" onTap="onClickMe">
-        <text class="text-white text-base">{{i18n.index.continue}}</text>
-      </button>
+        </view>
+      </view>
+      <view class="fixed bottom-6 left-0 right-0 mt-2 px-4">
 
+        <button-red onClickMe="onContinue" text="{{i18n.index.continue}}">
 
+        </button-red>
+      </view>
+    </view>
+  </view> 
+</block>
+
+<block a:if="{{ apiError }}">
+  <view class=" px-2">
+    <view class="h-vh-5"></view>
+    <view class="p-2 h-vh-80 bg-white shadow-lg border border-gray-200">
+      <ant-result image="/assets/imgs/warning-mid-gradient.png">
+        <view class="mt-4" slot="title">{{i18n.general.api_error_heading}}</view>
+        <view slot="message" class="text-left-0 mt-2">
+          {{i18n.general.api_error_sub_heading}}
+        </view>
+        <view slot="extra" style="padding-top: 48rpx;"></view>
+      </ant-result>
+
+      <view class="fixed bottom-6 left-0 right-0 mt-2 px-4">
+        <view class="mb-1">
+          <button-red onClickMe="onContinue" text="{{i18n.general.api_error_button}}">
+          </button-red>
+
+        </view>
+        <button-black text="{{i18n.index.create_a_cancel}}" onClickMe="handleCancel">
+        </button-black>
+
+      </view>
     </view>
   </view>
-</view>
+</block>

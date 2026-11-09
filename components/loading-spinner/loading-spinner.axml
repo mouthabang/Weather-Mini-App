@@ -1,0 +1,4 @@
+<view  a:if="{{ isLoading }}"  class="loading-overlay">
+    <image class="w-100 h-vh-40" src="/assets/imgs/loading.gif" mode="aspectFit" />
+</view>
+  

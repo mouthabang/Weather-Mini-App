@@ -5,15 +5,34 @@ import {
 const app = getApp();
 
 Page({
+
+  data: {
+    firstname: 'ABCD',
+    apiError: false,
+    isLoading: false
+  },
   onLoad(query) {
     
     loadLanguage(app.languageCode);
     this.setData({
-      i18n: app.i18n
+      i18n: app.i18n,
+      firstname: "Thabo"
     });
 
     console.log(this.data);
   },
+
+  onContinue() {
+
+    console.log("You have clicked me");
+
+
+    this.setData({
+      isLoading: true
+    });
+  },
+
+
   onReady() {
   },
   onShow() {

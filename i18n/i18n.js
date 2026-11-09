@@ -20,7 +20,7 @@ function loadLanguage(lang) {
     case 'en':
       langDictionary = en;
       break; 
-  
+   
     default:
       languageCode = 'en';
       langDictionary = en;
