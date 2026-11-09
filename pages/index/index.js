@@ -14,7 +14,7 @@ Page({
   onLoad(query) {
     
     loadLanguage(app.languageCode);
-    this.setData({
+    this.setData({ 
       i18n: app.i18n,
       firstname: "Thabo"
     });
