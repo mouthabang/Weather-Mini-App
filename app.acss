@@ -131,12 +131,8 @@
   margin-right: 1rem !important
 }
 
-.mt-4 {
-  margin-top: 1rem !important
-}
-
-.mt-2 {
-  margin-top: 0.5rem !important
+.mb-1 {
+  margin-bottom: 0.25rem !important
 }
 
 .mb-4 {
@@ -159,8 +155,16 @@
   margin-top: 0.25rem !important
 }
 
+.mt-2 {
+  margin-top: 0.5rem !important
+}
+
 .mt-3 {
   margin-top: 0.75rem !important
+}
+
+.mt-4 {
+  margin-top: 1rem !important
 }
 
 .mt-6 {
@@ -195,6 +199,10 @@
   display: none !important
 }
 
+.h-vh-40 {
+  height: 40vh !important
+}
+
 .h-vh-5 {
   height: 5vh !important
 }
@@ -205,6 +213,10 @@
 
 .min-h-screen {
   min-height: 100vh !important
+}
+
+.w-full {
+  width: 100% !important
 }
 
 .border-collapse {
@@ -249,18 +261,6 @@
   gap: 0.75rem !important
 }
 
-.rounded-lg {
-  border-radius: 0.5rem !important
-}
-
-.rounded-xl {
-  border-radius: 0.75rem !important
-}
-
-.rounded-sm {
-  border-radius: 0.125rem !important
-}
-
 .rounded-2xl {
   border-radius: 1rem !important
 }
@@ -273,6 +273,18 @@
   border-radius: 9999px !important
 }
 
+.rounded-lg {
+  border-radius: 0.5rem !important
+}
+
+.rounded-sm {
+  border-radius: 0.125rem !important
+}
+
+.rounded-xl {
+  border-radius: 0.75rem !important
+}
+
 .border {
   border-width: 1px !important
 }
@@ -281,9 +293,13 @@
   border-top-width: 1px !important
 }
 
-.border-gray-200 {
+.border-solid {
+  border-style: solid !important
+}
+
+.border-black {
   --tw-border-opacity: 1 !important;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important
+  border-color: rgb(0 0 0 / var(--tw-border-opacity)) !important
 }
 
 .border-blue-400 {
@@ -296,9 +312,14 @@
   border-color: rgb(243 244 246 / var(--tw-border-opacity)) !important
 }
 
-.bg-white {
+.border-gray-200 {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important
+}
+
+.bg-blue-600 {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity)) !important
 }
 
 .bg-gray-400 {
@@ -306,9 +327,9 @@
   background-color: rgb(156 163 175 / var(--tw-bg-opacity)) !important
 }
 
-.bg-red-700 {
+.bg-green-100 {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity)) !important
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity)) !important
 }
 
 .bg-red-400 {
@@ -321,19 +342,23 @@
   background-color: rgb(220 38 38 / var(--tw-bg-opacity)) !important
 }
 
-.bg-blue-600 {
+.bg-red-700 {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity)) !important
-}
-
-.bg-green-100 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(220 252 231 / var(--tw-bg-opacity)) !important
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity)) !important
 }
 
 .bg-slate-50 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity)) !important
+}
+
+.bg-white {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important
+}
+
+.p-1 {
+  padding: 0.25rem !important
 }
 
 .p-2 {
@@ -397,21 +422,6 @@
   text-align: center !important
 }
 
-.text-lg {
-  font-size: 18px !important;
-  line-height: 28px !important
-}
-
-.text-sm {
-  font-size: 14px !important;
-  line-height: 20px !important
-}
-
-.text-base {
-  font-size: 16px !important;
-  line-height: 24px !important
-}
-
 .text-2xl {
   font-size: 24px !important;
   line-height: 32px !important
@@ -420,6 +430,21 @@
 .text-7xl {
   font-size: 4.5rem !important;
   line-height: 1 !important
+}
+
+.text-base {
+  font-size: 16px !important;
+  line-height: 24px !important
+}
+
+.text-lg {
+  font-size: 18px !important;
+  line-height: 28px !important
+}
+
+.text-sm {
+  font-size: 14px !important;
+  line-height: 20px !important
 }
 
 .text-xl {
@@ -448,9 +473,9 @@
   font-weight: 600 !important
 }
 
-.text-white {
+.text-\[\#E60000\] {
   --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important
+  color: rgb(230 0 0 / var(--tw-text-opacity)) !important
 }
 
 .text-blue-100 {
@@ -488,6 +513,11 @@
   color: rgb(30 41 59 / var(--tw-text-opacity)) !important
 }
 
+.text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important
+}
+
 .underline {
   text-decoration-line: underline !important
 }
@@ -507,4 +537,3 @@
 .outline {
   outline-style: solid !important
 }
-

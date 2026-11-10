@@ -1,7 +1,9 @@
 {
   "usingComponents": {
-
     "button-red": "../../components/button-red/button-red",
-    "loading-spinner": "../../components/loading-spinner/loading-spinner"
-  } 
+    "loading-spinner": "../../components/loading-spinner/loading-spinner",
+    "input-field": "../../components/input-field/input-field",
+    "ant-dialog": "antd-mini/es/Dialog/index",
+    "ant-result": "antd-mini/es/Result/index"
+  }
 }

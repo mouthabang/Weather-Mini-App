@@ -1,0 +1,9 @@
+{
+  "modes": [
+    {
+      "title": "pages/view-weather/view-weather",
+      "page": "pages/view-weather/view-weather",
+      "pageQuery": ""
+    }
+  ]
+}

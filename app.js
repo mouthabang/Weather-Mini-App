@@ -1,6 +1,7 @@
 App({
   languageCode: '',
   i18n: null,
+  
 
 
   onLaunch(options) {

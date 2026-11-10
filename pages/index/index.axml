@@ -1,5 +1,4 @@
-
-  <loading-spinner isLoading="{{isLoading}}"></loading-spinner>
+<loading-spinner isLoading="{{isLoading}}"></loading-spinner>
 
 <block a:if="{{ !apiError }}">
 
@@ -11,10 +10,18 @@
         <text class="text-lg font-bold">
           {{i18n.index.title}}
         </text>
-        <view>
-          <text>{{firstname}}</text>
-
+        <view class="mt-4">
+         <input-field
+         inputType="text"
+         validationType="name"
+         placeholder="Enter Firstname"
+         value="{{firstname}}"
+         onValueChange="onFirstnameChange"
+         >
+        </input-field>
         </view>
+
+
       </view>
       <view class="fixed bottom-6 left-0 right-0 mt-2 px-4">
 
@@ -23,7 +30,7 @@
         </button-red>
       </view>
     </view>
-  </view> 
+  </view>
 </block>
 
 <block a:if="{{ apiError }}">
@@ -51,3 +58,14 @@
     </view>
   </view>
 </block>
+
+
+<ant-dialog
+  title="Information"
+  content="{{errorMessage}}"
+  onButtonTap="onButtonTap"
+  visible="{{dialogVisible}}"
+  onClose="handleClose"
+  footer="{{dialogFooter}}"
+>
+</ant-dialog>

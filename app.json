@@ -1,11 +1,11 @@
 {
   "subPackageBuildType": "shared",
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/view-weather/view-weather"
   ],
   "window": {
     "defaultTitle": "LS weather",
     "backgroundColor": "#ebebeb"
-
-   }
+  }
 }

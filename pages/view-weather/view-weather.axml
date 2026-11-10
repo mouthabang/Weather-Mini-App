@@ -1,0 +1,12 @@
+<view>
+  Welcome : {{firstname}}
+
+</view>
+
+<view class="mt-4">
+  <text>Temperature: {{temperature}}</text>
+</view>
+
+<view a:for="{{ forecast }}" class="mt-4" a:key="index">
+  <text>{{item}}</text>
+</view>

@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "antd-mini": "^3.4.3"
   }
 }

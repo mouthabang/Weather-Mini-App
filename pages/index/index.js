@@ -7,46 +7,92 @@ const app = getApp();
 Page({
 
   data: {
+    errorMessage: '',
     firstname: 'ABCD',
+    amount: "",
     apiError: false,
-    isLoading: false
+    isLoading: false,
+    dialogVisible: false,
+    dialogFooter: {
+      buttons: [{
+        text: "Okay",
+        style: 'background-color: #E60000;  box-shadow: 0 0 0 2px #E60000;'
+      }]
+    }
+
   },
   onLoad(query) {
-    
+
     loadLanguage(app.languageCode);
-    this.setData({ 
+    this.setData({
       i18n: app.i18n,
-      firstname: "Thabo"
+      firstname: ""
     });
 
-    console.log(this.data);
   },
 
-  onContinue() {
+  onFirstnameInput(e) {
 
-    console.log("You have clicked me");
-
+    const value  = e.detail.value;
 
     this.setData({
-      isLoading: true
+      firstname: value 
+    }); 
+
+  
+  },
+
+  handleClose() {
+    this.setData({
+      dialogVisible: false
     });
   },
 
+  onButtonTap() {
+    this.handleClose();
+  },
 
-  onReady() {
+
+  onContinue() {
+    console.log("You have clicked me");
+
+    if(this.data.firstname == '') {
+      this.setData({
+        dialogVisible: true,
+        errorMessage: "Invalid Firstname"
+      });
+  
+      return;
+    }
+
+    my.navigateTo({
+      url: `/pages/view-weather/view-weather?firstname=${this.data.firstname}`
+    });
   },
-  onShow() {
+
+  onFirstnameChange(value) {
+    console.log(value);
+
+    this.setData({
+      firstname: value
+    })
   },
-  onHide() { 
-  },
-  onUnload() {
-  },
-  onTitleClick() {
-  },
-  onPullDownRefresh() {
-  },
-  onReachBottom() {
-  },
+
+  onAmountChange(value) {
+    console.log(value);
+
+    this.setData({
+      amount: value
+    });
+  }, 
+
+  onReady() {},
+  onShow() {},
+  onHide() {},
+  onUnload() {},
+  onTitleClick() {},
+  onPullDownRefresh() {},
+  onReachBottom() {},
   onShareAppMessage() {
     // 返回自定义分享信息
     return {

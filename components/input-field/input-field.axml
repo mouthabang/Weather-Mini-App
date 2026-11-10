@@ -1,0 +1,10 @@
+<view class="border border-solid rounded-sm  p-1 border-black">
+  <input class="textbase w-full" 
+  value="{{firstname}}"
+  type="{{inputType || 'text'}}" 
+  onInput="onInput" placeholder="{{placeholder}}" />
+</view>
+
+<view a:if="{{ errorMessage }}">
+    <text class="text-[#E60000] text-sm">{{errorMessage}}</text>
+</view>
