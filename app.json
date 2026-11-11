@@ -2,7 +2,8 @@
   "subPackageBuildType": "shared",
   "pages": [
     "pages/index/index",
-    "pages/view-weather/view-weather"
+    "pages/view-weather/view-weather",
+    "pages/enter-third-party-no/enter-third-party-no"
   ],
   "window": {
     "defaultTitle": "LS weather",

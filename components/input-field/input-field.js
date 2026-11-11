@@ -8,11 +8,10 @@ Component({
     errorMessage: '',
     validationType: null, 
     internalValue: '',
-    placeholder: ""
+    internalPlaceHolder: ''
   },
   props: {
     value: '',
-
     inputType: 'text',
     validationType: '', 
     placeholder: "",
@@ -27,13 +26,12 @@ Component({
         internalValue: this.props.value || ''
       });
     }
+
   },
   didUpdate(prevProps) {
-    if (this.props.value !== prevProps.value) {
-      this.setData({
-        internalValue: this.props.value || ''
-      });
-    }
+   
+
+
   },
   didUnmount() {},
   methods: {
@@ -60,6 +58,10 @@ Component({
         this.props.onValueChange(value, errorMessage === '');
       }
 
+      if (this.props.onValidationError) {
+        this.props.onValidationError(errorMessage || '');
+      }
+
 
     },
 
@@ -73,22 +75,36 @@ Component({
       switch(type) {
         case 'name': 
         return this.validateFirstname(value);
+        case "policy":
+          return this.validatePolicyNo(value);
       }
     },
 
 
     validateFirstname(value) {
 
-      console.log(value);
-
       if(!/^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/.test(value)) {
         return "Your name is not in the right format";
       }
 
-
-      
+      if(value.length < 2) {
+        return "Your name should be greater that 2 characters"
+      }
 
       return '';
+    },
+
+    validatePolicyNo(value) {
+      console.log(value);
+
+      if(!/^[0-9]+$/.test(value)) {
+        return "Policy is not in the correct format"
+      }
+
+
+      return "";
     }
+
+
   },
 });

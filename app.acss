@@ -175,6 +175,10 @@
   margin-top: 1.75rem !important
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem !important
+}
+
 .block {
   display: block !important
 }
@@ -416,6 +420,10 @@
 
 .pt-6 {
   padding-top: 1.5rem !important
+}
+
+.text-left {
+  text-align: left !important
 }
 
 .text-center {

@@ -17,10 +17,11 @@
          placeholder="Enter Firstname"
          value="{{firstname}}"
          onValueChange="onFirstnameChange"
+         onValidationError="onFirstnameValidationError"
          >
+
         </input-field>
         </view>
-
 
       </view>
       <view class="fixed bottom-6 left-0 right-0 mt-2 px-4">

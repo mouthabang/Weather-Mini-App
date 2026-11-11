@@ -7,6 +7,7 @@ const app = getApp();
 Page({
 
   data: {
+    firstnameErrorField: '',
     errorMessage: '',
     firstname: 'ABCD',
     amount: "",
@@ -56,10 +57,10 @@ Page({
   onContinue() {
     console.log("You have clicked me");
 
-    if(this.data.firstname == '') {
+    if(this.data.firstnameErrorField) {
       this.setData({
         dialogVisible: true,
-        errorMessage: "Invalid Firstname"
+        errorMessage: this.data.firstnameErrorField
       });
   
       return;
@@ -76,6 +77,14 @@ Page({
     this.setData({
       firstname: value
     })
+  },
+
+  onFirstnameValidationError(errorMessage) {
+    this.setData({
+      firstnameErrorField: errorMessage || ""
+    });
+
+    console.log(this.data.firstnameErrorField);
   },
 
   onAmountChange(value) {
